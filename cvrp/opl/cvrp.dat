@@ -1,0 +1,10 @@
+// Same small CVRP instance used by the Python/DOcplex implementation.
+
+n = 9;
+depot = 0;
+vehicleCapacity = 15;
+maxVehicles = 3;
+
+demand = [0, 4, 5, 3, 6, 4, 5, 2, 4];
+xCoord  = [50, 20, 18, 35, 62, 82, 80, 58, 36];
+yCoord  = [50, 65, 38, 20, 18, 35, 68, 82, 84];
