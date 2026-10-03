@@ -1,0 +1,39 @@
+// Four candidate facilities and eight customers.
+
+numFacilities = 4;
+numCustomers = 8;
+
+facilityName = ["North", "South", "East", "West"];
+customerName = ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"];
+
+fixedCost = [
+  850,
+  780,
+  920,
+  800
+];
+
+capacity = [
+  95,
+  85,
+  100,
+  90
+];
+
+demand = [
+  20,
+  15,
+  25,
+  10,
+  18,
+  22,
+  16,
+  14
+];
+
+assignmentCost = [
+  [120, 100, 150, 130, 180, 160, 140, 170],
+  [170, 140, 130, 110, 120, 100, 150, 130],
+  [140, 160, 100, 120, 130, 150, 110,  90],
+  [100, 120, 160, 150, 140, 130,  90, 110]
+];
