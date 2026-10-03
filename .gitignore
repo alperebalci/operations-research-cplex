@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Generated optimization outputs
+cvrp/results/*
+!cvrp/results/README.md
+*.log
+*.lp
+*.sav
+*.mst
