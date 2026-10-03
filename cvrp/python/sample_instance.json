@@ -1,0 +1,17 @@
+{
+  "name": "small_cvrp_demo",
+  "vehicle_capacity": 15,
+  "max_vehicles": 3,
+  "depot": 0,
+  "nodes": [
+    {"id": 0, "x": 50, "y": 50, "demand": 0},
+    {"id": 1, "x": 20, "y": 65, "demand": 4},
+    {"id": 2, "x": 18, "y": 38, "demand": 5},
+    {"id": 3, "x": 35, "y": 20, "demand": 3},
+    {"id": 4, "x": 62, "y": 18, "demand": 6},
+    {"id": 5, "x": 82, "y": 35, "demand": 4},
+    {"id": 6, "x": 80, "y": 68, "demand": 5},
+    {"id": 7, "x": 58, "y": 82, "demand": 2},
+    {"id": 8, "x": 36, "y": 84, "demand": 4}
+  ]
+}
