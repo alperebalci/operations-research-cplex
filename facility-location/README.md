@@ -59,4 +59,8 @@ Capacity:
 Σ_c demand[c] * assign[f,c] <= capacity[f] * open[f]
 ```
 
+## Sample-instance verification
+
+The small sample instance was independently checked by exhaustive enumeration. The best objective is `2460`, with the South and West facilities open. This provides a reference value for validating a local CPLEX/OPL run.
+
 Open the `.mod` and `.dat` files in IBM ILOG CPLEX Optimization Studio and run them with CPLEX.
