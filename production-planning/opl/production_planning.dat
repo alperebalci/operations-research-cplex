@@ -1,7 +1,9 @@
 // Three-product, six-period production planning instance.
 
+numProducts = 3;
 numPeriods = 6;
-Products = {"A", "B", "C"};
+
+productName = ["A", "B", "C"];
 
 demand = [
   [40, 55, 35, 60, 45, 50],
@@ -9,68 +11,17 @@ demand = [
   [50, 45, 55, 60, 50, 65]
 ];
 
-productionCost = [
-  8.0,
-  10.5,
-  6.5
-];
+productionCost = [8.0, 10.5, 6.5];
+setupCost = [180.0, 220.0, 160.0];
+holdingCost = [1.2, 1.4, 1.0];
+processingTime = [1.0, 1.5, 0.8];
 
-setupCost = [
-  180.0,
-  220.0,
-  160.0
-];
+regularCapacity = [150, 145, 155, 150, 155, 150];
+maxOvertime = [30, 30, 30, 30, 30, 30];
+overtimeCost = [18.0, 18.0, 20.0, 20.0, 22.0, 22.0];
 
-holdingCost = [
-  1.2,
-  1.4,
-  1.0
-];
-
-processingTime = [
-  1.0,
-  1.5,
-  0.8
-];
-
-regularCapacity = [
-  150,
-  145,
-  155,
-  150,
-  155,
-  150
-];
-
-maxOvertime = [
-  30,
-  30,
-  30,
-  30,
-  30,
-  30
-];
-
-overtimeCost = [
-  18.0,
-  18.0,
-  20.0,
-  20.0,
-  22.0,
-  22.0
-];
-
-initialInventory = [
-  20,
-  10,
-  15
-];
-
-targetEndingInventory = [
-  10,
-  10,
-  10
-];
+initialInventory = [20, 10, 15];
+targetEndingInventory = [10, 10, 10];
 
 maxProduction = [
   [100, 100, 100, 100, 100, 100],
