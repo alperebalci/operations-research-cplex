@@ -2,7 +2,7 @@
 
 A portfolio repository for mathematical optimization projects implemented with **IBM ILOG CPLEX**.
 
-The repository focuses on formulation, implementation, validation, and interpretation rather than treating the solver as a black box. Where useful, the same model is implemented through both **Python/DOcplex** and CPLEX's native **OPL (Optimization Programming Language)**.
+The repository focuses on formulation, implementation, validation, and interpretation rather than treating the solver as a black box. Where useful, models are implemented through **Python/DOcplex** and/or CPLEX's native **OPL (Optimization Programming Language)**.
 
 ## Projects
 
@@ -18,6 +18,18 @@ Implemented in:
 The formulation uses binary arc variables and MTZ-style cumulative-load constraints for capacity enforcement and subtour elimination.
 
 See [`cvrp/README.md`](cvrp/README.md).
+
+### 2. Multi-Period Production Planning
+
+Plan production, inventory, setup decisions, and overtime capacity across multiple products and periods while minimizing total operating cost.
+
+Implemented in:
+
+- `production-planning/opl/` — native OPL MILP model and a three-product, six-period sample instance.
+
+The formulation includes inventory-flow equations, binary setup decisions, Big-M production/setup linking, shared capacity, overtime, and terminal inventory targets.
+
+See [`production-planning/README.md`](production-planning/README.md).
 
 ## Repository structure
 
@@ -35,18 +47,24 @@ See [`cvrp/README.md`](cvrp/README.md).
 │   │   └── README.md
 │   ├── results/
 │   └── README.md
+├── production-planning/
+│   ├── opl/
+│   │   ├── production_planning.mod
+│   │   ├── production_planning.dat
+│   │   └── README.md
+│   └── README.md
 ├── .github/workflows/tests.yml
 ├── LICENSE
 └── README.md
 ```
 
-## Why two modeling interfaces?
+## Modeling interfaces
 
-DOcplex is useful when optimization is embedded in a Python data/application workflow. OPL is a compact algebraic modeling language designed specifically for IBM ILOG CPLEX Optimization Studio. Implementing the same model in both makes the mathematical formulation easier to compare with the application-layer code.
+DOcplex is useful when optimization is embedded in a Python data/application workflow. OPL is a compact algebraic modeling language designed specifically for IBM ILOG CPLEX Optimization Studio. The repository uses both styles to demonstrate mathematical modeling as well as application-oriented solver integration.
 
 ## Current scope
 
-The repository currently contains CVRP. Natural extensions include vehicle-routing time windows, production scheduling, facility location, workforce scheduling, and other mixed-integer programming models.
+The repository currently covers vehicle routing and multi-period production planning. Natural extensions include vehicle-routing time windows, facility location, workforce scheduling, job-shop scheduling, cutting stock, and other mixed-integer programming models.
 
 ## License
 
