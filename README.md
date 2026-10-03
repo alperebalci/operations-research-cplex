@@ -31,26 +31,37 @@ The formulation includes inventory-flow equations, binary setup decisions, Big-M
 
 See [`production-planning/README.md`](production-planning/README.md).
 
+### 3. Capacitated Facility Location
+
+Select facilities to open and assign customers to them while minimizing fixed opening and assignment costs under capacity constraints.
+
+Implemented in:
+
+- `facility-location/opl/` — native OPL MILP model with four candidate facilities and eight customers.
+
+The formulation combines binary facility-opening decisions, binary customer assignments, linking constraints, and capacity limits.
+
+See [`facility-location/README.md`](facility-location/README.md).
+
 ## Repository structure
 
 ```text
 .
 ├── cvrp/
 │   ├── python/
-│   │   ├── src/cvrp/
-│   │   ├── tests/
-│   │   ├── pyproject.toml
-│   │   └── sample_instance.json
 │   ├── opl/
-│   │   ├── cvrp.mod
-│   │   ├── cvrp.dat
-│   │   └── README.md
 │   ├── results/
 │   └── README.md
 ├── production-planning/
 │   ├── opl/
 │   │   ├── production_planning.mod
 │   │   ├── production_planning.dat
+│   │   └── README.md
+│   └── README.md
+├── facility-location/
+│   ├── opl/
+│   │   ├── facility_location.mod
+│   │   ├── facility_location.dat
 │   │   └── README.md
 │   └── README.md
 ├── .github/workflows/tests.yml
@@ -64,7 +75,7 @@ DOcplex is useful when optimization is embedded in a Python data/application wor
 
 ## Current scope
 
-The repository currently covers vehicle routing and multi-period production planning. Natural extensions include vehicle-routing time windows, facility location, workforce scheduling, job-shop scheduling, cutting stock, and other mixed-integer programming models.
+The repository currently covers vehicle routing, multi-period production planning, and capacitated facility location. Natural extensions include workforce scheduling, job-shop scheduling, cutting stock, and vehicle-routing time windows.
 
 ## License
 
