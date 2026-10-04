@@ -1,0 +1,18 @@
+numJobs = 3;
+numMachines = 3;
+numOperationsPerJob = 3;
+
+jobName = ["Job1", "Job2", "Job3"];
+machineName = ["M1", "M2", "M3"];
+
+machine = [
+  [1,2,3],
+  [2,3,1],
+  [3,1,2]
+];
+
+duration = [
+  [3,2,2],
+  [2,1,4],
+  [4,3,1]
+];
